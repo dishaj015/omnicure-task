@@ -22,12 +22,13 @@
       <b-button v-if="currentQuestion != lastIndex" variant="success"   @click="next">
         Next
       </b-button>      
-      <b-button  v-if="currentQuestion == lastIndex" variant="success" class="submit-btn">
-       <router-link :to="{
+     <router-link :to="{
                       name: 'result-page',
                       params: {  questionLength:questions.length}
-                    }">  Submit</router-link>
+                    }"> <b-button  v-if="currentQuestion == lastIndex" variant="success" class="submit-btn">
+         Submit
       </b-button>
+      </router-link>
        <!-- btn -->
       </div>
     </div>
