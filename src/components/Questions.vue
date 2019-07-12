@@ -22,13 +22,12 @@
       <b-button v-if="currentQuestion != lastIndex" variant="success"   @click="next">
         Next
       </b-button>      
-      <b-button  v-if="currentQuestion == lastIndex" variant="success" >
+      <b-button  v-if="currentQuestion == lastIndex" variant="success" class="submit-btn">
        <router-link :to="{
                       name: 'result-page',
                       params: {  questionLength:questions.length}
                     }">  Submit</router-link>
       </b-button>
-       <span class="ml-2 " :class="[resultData?'success':'error']" v-if="isResult">{{resultData?'Correct':'false'}}</span>
        <!-- btn -->
       </div>
     </div>
@@ -71,6 +70,14 @@ export default{
     },
     // check result
     checkResult(res,ques,i){ 
+      
+      if(res == true){
+        // eslint-disable-next-line
+      console.log("response is",res);
+      }else{
+        // eslint-disable-next-line
+        console.log("response is",false);
+      }
   this.isResult= true; 
 // check res
 //when res is true

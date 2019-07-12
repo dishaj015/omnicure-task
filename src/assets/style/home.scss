@@ -6,11 +6,9 @@
     padding: 2em;
 //home
 .home{
-        .success{
-          color: green;
-        }
-        .error{
-            color:red;
+        .submit-btn{
+            text-decoration: none !important;
+            color: #fff;
         }
 
 }
